@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>pywinauto - Windows GUI Automation</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>pywinauto</h1>
+        <p>64-bit Py2/Py3 compatible pywinauto (Windows GUI Automation) by Mark McMahon (c)</p>
+
+        <p class="view"><a href="https://github.com/vasily-v-ryabov/pywinauto-64">View the Project on GitHub <small>vasily-v-ryabov/pywinauto-64</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/vasily-v-ryabov/pywinauto-64/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/vasily-v-ryabov/pywinauto-64/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/vasily-v-ryabov/pywinauto-64">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a id="windows-gui-automation-with-python" class="anchor" href="#windows-gui-automation-with-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows GUI Automation with Python</h1>
+
+<p>pywinauto (c) Mark Mc Mahon and Co., 2006 - 2015</p>
+
+<p>pywinauto is coming back! Set of python modules to automate the Microsoft Windows GUI 
+allows you to send mouse and keyboard actions to windows dialogs and controls, 
+but it also supports more complex actions.</p>
+
+<p>Newer version adds 64-bit support and works on Python 3.x.</p>
+
+<p><img src="http://wiki.pywinauto.googlecode.com/hg/notepad-simple2-ir.gif" alt="Notepad.exe automation example"></p>
+
+<p>It is simple and the resulting scripts are very readable. How simple?</p>
+
+<div class="highlight highlight-python"><pre>app.Notepad.MenuSelect(<span class="pl-s"><span class="pl-pds">"</span>Help-&gt;About Notepad<span class="pl-pds">"</span></span>)
+app.AboutNotepad.OK.Click()
+app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywinauto Works!<span class="pl-pds">"</span></span>, <span class="pl-smi">with_spaces</span> <span class="pl-k">=</span> <span class="pl-c1">True</span>)</pre></div>
+
+<h3>
+<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h3>
+
+<ul>
+<li>pywinauto 0.5.0 is planned until end of June, 2015.
+
+<ul>
+<li>[x] 64-bit Python is supported</li>
+<li>[x] Python 2.x/3.x compatibility</li>
+<li>[!] Added pyWin32 dependency</li>
+<li>[x] Improvements for Toolbar, TreeView, UpDown and DateTimePicker wrappers</li>
+<li>[x] Improved <code>best_match</code> algorithm allows names like <code>ToolbarFile</code>
+</li>
+<li>[x] Clicks can be performed with pressed Ctrl or Shift</li>
+<li>[x] Drag-n-drop and scrolling methods (DragMouse, DragMouseInput, MouseWheelInput)</li>
+<li>[x] Improved menu support: handling OWNERDRAW menu items; access by command_id (like <code>$23453</code>)</li>
+<li>[x] <code>RemoteMemoryBlock</code> can now detect memory corruption by checking guard signature</li>
+<li>[ ] Upgraded <code>taskbar</code> module</li>
+<li>[x] <code>sysinfo</code> module for checking 32-bit or 64-bit OS and Python</li>
+<li>[x] <code>set_foreground</code> flag in <code>TypeKeys</code> method for typing into in-place controls</li>
+<li>[x] <code>create_new_console</code> flag in <code>Application.start_</code> method</li>
+</ul>
+</li>
+</ul>
+
+<h3>
+<a id="supported-controls" class="anchor" href="#supported-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported controls</h3>
+
+<ul>
+<li>Native Windows controls (full support through Win32 API)</li>
+<li>.NET Windows Forms (partial support through Win32 API, some basic controls only)</li>
+</ul>
+
+<h3>
+<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<ul>
+<li>pyWin32 package (<a href="http://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/">build 219</a> is recommended). This is NOT required for ActivePython (except 3.4 64-bit).</li>
+</ul>
+
+<h3>
+<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h3>
+
+<ul>
+<li>Install pyWin32 extensions above (no need for Active Python)</li>
+<li>Download <a href="https://github.com/vasily-v-ryabov/pywinauto-64/archive/master.zip">master branch as ZIP</a>
+</li>
+<li>Just unpack and run <strong>python.exe setup.py install</strong>
+</li>
+</ul>
+
+<h3>
+<a id="testing-status" class="anchor" href="#testing-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing status</h3>
+
+<ul>
+<li><a href="https://github.com/vasily-v-ryabov/pywinauto-64/wiki/Unit-testing-status">Unit tests pass rate for master branch</a></li>
+</ul>
+
+<h4>
+<a id="packages-required-for-running-unit-tests" class="anchor" href="#packages-required-for-running-unit-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages required for running unit tests</h4>
+
+<ul>
+<li>
+<a href="https://pypi.python.org/pypi/Pillow/2.7.0">Pillow</a> or PIL</li>
+<li><a href="https://pypi.python.org/pypi/coverage">coverage</a></li>
+</ul>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/vasily-v-ryabov">vasily-v-ryabov</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
