@@ -96,7 +96,7 @@ img {
 }
 
 header {
-  width:320px;
+  width:380px;
   float:left;
   position:fixed;
 }
@@ -160,7 +160,7 @@ header ul a strong {
 }
 
 section {
-  width:700px;
+  width:740px;
   float:right;
   padding-bottom:50px;
 }
@@ -177,13 +177,13 @@ hr {
 }
 
 footer {
-  width:270px;
+  width:300px;
   float:left;
   position:fixed;
   bottom:50px;
 }
 
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 1000px) {
   
   div.wrapper {
     width:auto;
@@ -218,7 +218,7 @@ footer {
   }
 }
 
-@media print, screen and (max-width: 920px) {
+@media print, screen and (max-width: 960px) {
   body {
     word-wrap:break-word;
   }
