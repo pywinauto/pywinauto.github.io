@@ -96,7 +96,7 @@ img {
 }
 
 header {
-  width:360px;
+  width:320px;
   float:left;
   position:fixed;
 }
@@ -183,7 +183,7 @@ footer {
   bottom:50px;
 }
 
-@media print, screen and (max-width: 1000px) {
+@media print, screen and (max-width: 1060px) {
   
   div.wrapper {
     width:auto;
