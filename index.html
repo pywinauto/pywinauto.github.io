@@ -16,7 +16,7 @@
     <div class="wrapper">
       <header>
         <h1>pywinauto</h1>
-        <p>(c) Mark Mc Mahon, 2006-2015</p>
+        <p>(c) Mark Mc Mahon</p>
 
         <p class="view"><a href="https://github.com/pywinauto/pywinauto">View the Project on GitHub <small>pywinauto/pywinauto</small></a></p>
 
@@ -80,18 +80,19 @@ app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywin
 <ul>
 <li>[x] 64-bit Python is supported</li>
 <li>[x] Python 2.x/3.x compatibility</li>
-<li>[!] Added pyWin32 dependency</li>
+<li>[!] Added pyWin32 dependency (silent install by pip starting from Py2.7)</li>
 <li>[x] Improvements for Toolbar, TreeView, UpDown and DateTimePicker wrappers</li>
 <li>[x] Improved <code>best_match</code> algorithm allows names like <code>ToolbarFile</code>
 </li>
 <li>[x] Clicks can be performed with pressed Ctrl or Shift</li>
-<li>[x] Drag-n-drop and scrolling methods (DragMouse, DragMouseInput, MouseWheelInput)</li>
+<li>[x] Drag-n-drop and scrolling methods (DragMouse, DragMouseInput, WheelMouseInput)</li>
 <li>[x] Improved menu support: handling OWNERDRAW menu items; access by command_id (like <code>$23453</code>)</li>
+<li>[x] Resolved issues with py2exe and cx_freeze</li>
 <li>[x] <code>RemoteMemoryBlock</code> can now detect memory corruption by checking guard signature</li>
 <li>[ ] Upgraded <code>taskbar</code> module</li>
 <li>[x] <code>sysinfo</code> module for checking 32-bit or 64-bit OS and Python</li>
 <li>[x] <code>set_foreground</code> flag in <code>TypeKeys</code> method for typing into in-place controls</li>
-<li>[x] <code>create_new_console</code> flag in <code>Application.start_</code> method</li>
+<li>[x] Flags <code>create_new_console</code> and <code>wait_for_idle</code> in <code>Application.start_</code> method</li>
 </ul>
 </li>
 </ul>
