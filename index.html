@@ -52,8 +52,6 @@
 allows you to send mouse and keyboard actions to windows dialogs and controls, 
 but it also supports more complex actions.</p>
 
-<p>Currently we recommend to run 64-bit Python for 64-bit applications and 32-bit Python for 32-bit ones.</p>
-
 <p><img src="https://raw.githubusercontent.com/pywinauto/pywinauto.github.io/master/notepad-simple2-ir.gif" alt="Notepad.exe automation example"></p>
 
 <p>It is simple and the resulting scripts are very readable. How simple?</p>
@@ -80,9 +78,9 @@ app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywin
 <li>pywinauto 0.5.0 is planned until end of June, 2015.
 
 <ul>
-<li>[x] 64-bit Python is supported</li>
+<li>[x] 64-bit Python and 64-bit apps support (but 32-bit Python is recommended for 32-bit apps)</li>
 <li>[x] Python 2.x/3.x compatibility</li>
-<li>[!] Added pyWin32 dependency (silent install by pip starting from Py2.7)</li>
+<li>[!] Added pyWin32 dependency (silent install by pip for 2.7 and 3.1+)</li>
 <li>[x] Improvements for Toolbar, TreeView, UpDown and DateTimePicker wrappers</li>
 <li>[x] Improved <code>best_match</code> algorithm allows names like <code>ToolbarFile</code>
 </li>
@@ -91,7 +89,7 @@ app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywin
 <li>[x] Improved menu support: handling OWNERDRAW menu items; access by command_id (like <code>$23453</code>)</li>
 <li>[x] Resolved issues with py2exe and cx_freeze</li>
 <li>[x] <code>RemoteMemoryBlock</code> can now detect memory corruption by checking guard signature</li>
-<li>[ ] Upgraded <code>taskbar</code> module</li>
+<li>[x] Upgraded <code>taskbar</code> module for Win7 and Win 8.1; added hidden icons support</li>
 <li>[x] <code>sysinfo</code> module for checking 32-bit or 64-bit OS and Python</li>
 <li>[x] <code>set_foreground</code> flag in <code>TypeKeys</code> method for typing into in-place controls</li>
 <li>[x] Flags <code>create_new_console</code> and <code>wait_for_idle</code> in <code>Application.start_</code> method</li>

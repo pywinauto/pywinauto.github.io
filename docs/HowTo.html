@@ -60,43 +60,42 @@
 with the app you are automating. So the Application instance needs
 to be connected to a process. There are two ways of doing this:</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>start_(self, cmd_line, timeout = app_start_timeout):
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">start</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd_line</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">app_start_timeout</span><span class="p">)</span> <span class="c"># static method:</span>
+<span class="n">start_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cmd_line</span><span class="p">,</span> <span class="n">timeout</span> <span class="o">=</span> <span class="n">app_start_timeout</span><span class="p">)</span> <span class="c"># instance method:</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>or:</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre>connect_(self, **kwargs):
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c"># static method:</span>
+<span class="n">connect_</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="c"># instance method:</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p><code class="docutils literal"><span class="pre">start_()</span></code> is used when the application is not running and you
+<p><code class="docutils literal"><span class="pre">start()</span></code> is used when the application is not running and you
 need to start it. Use it in the following way:</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">start_</span><span class="p">(</span><span class="s">r&quot;c:\path\to\your\application -a -n -y --arguments&quot;</span><span class="p">)</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s">r&quot;c:\path\to\your\application -a -n -y --arguments&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>The timeout parameter is optional, it should only be necessary to use
 it if the application takes a long time to start up.</p>
-<p><code class="docutils literal"><span class="pre">connect_()</span></code> is used when the application to be automated is already
-running. To specify a an already runing application you need to specify
+<p><code class="docutils literal"><span class="pre">connect()</span></code> is used when the application to be automated is already
+running. To specify an already running application you need to specify
 one of the following:</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">process:</th><td class="field-body"><p class="first">the process id of the application, e.g.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">connect_</span><span class="p">(</span><span class="n">process</span> <span class="o">=</span> <span class="mi">2341</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">process</span> <span class="o">=</span> <span class="mi">2341</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">handle:</th><td class="field-body"><p class="first">The windows handle of a window of the application, e.g.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">connect_</span><span class="p">(</span><span class="n">handle</span> <span class="o">=</span> <span class="mh">0x010f0c</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle</span> <span class="o">=</span> <span class="mh">0x010f0c</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
@@ -104,8 +103,7 @@ one of the following:</p>
 <tr class="field-odd field"><th class="field-name">path:</th><td class="field-body"><p class="first">The path of the executable of the process (<code class="docutils literal"><span class="pre">GetModuleFileNameEx</span></code>
 is used to find the path of each process and compared against
 the value passed in)  e.g.</p>
-<div class="last highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">connect_</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">r&quot;c:\windows\system32\notepad.exe&quot;</span><span class="p">)</span>
+<div class="last highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">r&quot;c:\windows\system32\notepad.exe&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
@@ -115,8 +113,7 @@ the value passed in)  e.g.</p>
 <p>or any combination of the parameters that specify a window, these get
 passed to the <code class="docutils literal"><span class="pre">findwindows.find_windows()</span></code> function.  e.g.</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span>
-<span class="n">app</span><span class="o">.</span><span class="n">connect_</span><span class="p">(</span><span class="n">title_re</span> <span class="o">=</span> <span class="s">&quot;.*Notepad&quot;</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="s">&quot;Notepad&quot;</span><span class="p">)</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">title_re</span> <span class="o">=</span> <span class="s">&quot;.*Notepad&quot;</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="s">&quot;Notepad&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -217,10 +214,10 @@ the contol. And append the friendly class. So the list becomes</p>
 </div></blockquote>
 <p>Once a set of identifiers has been created for all controls in the dialog
 we disambiguate them.</p>
-<p>use the <cite>WindowSpecification.print_control_identifiers()</cite> method</p>
+<p>use the <cite>WindowSpecification.PrintControlIdentifiers()</cite> method</p>
 <dl class="docutils">
 <dt>e.g.</dt>
-<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="n">app</span><span class="o">.</span><span class="n">YourDialog</span><span class="o">.</span><span class="n">print_control_identifiers</span><span class="p">()</span>
+<dd><div class="first last highlight-python"><div class="highlight"><pre><span class="n">app</span><span class="o">.</span><span class="n">YourDialog</span><span class="o">.</span><span class="n">PrintControlIdentifiers</span><span class="p">()</span>
 </pre></div>
 </div>
 </dd>
@@ -485,13 +482,13 @@ automated not part of explorer.</p>
 <p>e.g.</p>
 <blockquote>
 <div><div class="highlight-python"><div class="highlight"><pre><span class="c"># connect to outlook</span>
-<span class="n">outlook</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span><span class="o">.</span><span class="n">connect_</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#39;outlook.exe&#39;</span><span class="p">)</span>
+<span class="n">outlook</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">&#39;outlook.exe&#39;</span><span class="p">)</span>
 
 <span class="c"># click on Outlook&#39;s icon</span>
-<span class="n">taskbar</span><span class="o">.</span><span class="n">ClickSystemTrayIcon</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">taskbar</span><span class="o">.</span><span class="n">ClickSystemTrayIcon</span><span class="p">(</span><span class="s">&quot;Microsoft Outlook&quot;</span><span class="p">)</span>
 
 <span class="c"># Select an item in the popup menu</span>
-<span class="n">outlook</span><span class="o">.</span><span class="n">PopupMenu</span><span class="o">.</span><span class="n">MenuClick</span><span class="p">(</span><span class="s">&quot;Cancel Server Request&quot;</span><span class="p">)</span>
+<span class="n">outlook</span><span class="o">.</span><span class="n">PopupMenu</span><span class="o">.</span><span class="n">Menu</span><span class="p">()</span><span class="o">.</span><span class="n">GetMenuPath</span><span class="p">(</span><span class="s">&quot;Cancel Server Request&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">Click</span><span class="p">()</span>
 </pre></div>
 </div>
 </div></blockquote>
