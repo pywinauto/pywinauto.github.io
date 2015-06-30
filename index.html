@@ -27,19 +27,20 @@
           <li><a href="https://github.com/pywinauto/pywinauto">View On <strong>GitHub</strong></a></li>
         </ul>
 
-        <br/><p class="view">pywinauto 0.5.0 is coming (June,30)</p>
-        <blockquote><p class="view">64-bit support<br/>
+        <br/><p class="view">pywinauto 0.5.0 released (June,30)</p>
+        <blockquote><p class="view">64-bit support (req. 32-bit Py for 32-bit app)<br/>
         Python 2.x/3.x compatibility<br/>
         ! Added pyWin32 dependency<br/>
-        Several improvements<br/></blockquote>
+        Several improvements<br/>
+        <a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.0/pywinauto-0.5.0.zip">Download pywinauto-0.5.0.zip</a><br/>
+        <a href="https://github.com/pywinauto/pywinauto/releases/tag/0.5.0">Release notes</a><br/></blockquote>
 
         <br/><p class="view"><a href="https://github.com/pywinauto/pywinauto/releases">All downloads</a></p>
 
         <p class="view"><a href="http://pywinauto.github.io/docs/">Full documentation</a></p>
 
-        <br/><p class="view"><a href="https://code.google.com/p/swapy/">SWAPY: Simple Windows Automation on Py<br/>(pywinauto Inspector and Code generator)</a></p>
+        <br/><p class="view"><a href="https://code.google.com/p/swapy/">SWAPY<br/>(pywinauto Inspector and Code generator)</a></p>
 
-        <p class="view"><img src="https://raw.githubusercontent.com/pywinauto/pywinauto.github.io/master/steps.jpg" alt="SWAPY steps example" width="270"/></p>
 
       </header>
       <section>
@@ -64,36 +65,10 @@ app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywin
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h3>
 
 <ul>
-<li>Install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/" target="_blank">pyWin32 extensions</a> (no need for Active Python)</li>
+<li>Install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/" target="_blank">pyWin32 extensions</a> (no need for Active Python except 3.4 64-bit)</li>
 <li>Download <a href="https://github.com/pywinauto/pywinauto/archive/master.zip" target="_blank">master branch as ZIP</a>
 </li>
 <li>Just unpack and run <code>python.exe setup.py install</code>
-</li>
-</ul>
-
-<h3>
-<a id="roadmap" class="anchor" href="#roadmap" aria-hidden="true"><span class="octicon octicon-link"></span></a>Roadmap</h3>
-
-<ul>
-<li>pywinauto 0.5.0 is planned until end of June, 2015.
-
-<ul>
-<li>[x] 64-bit Python and 64-bit apps support (but 32-bit Python is recommended for 32-bit apps)</li>
-<li>[x] Python 2.x/3.x compatibility</li>
-<li>[!] Added pyWin32 dependency (silent install by pip for 2.7 and 3.1+)</li>
-<li>[x] Improvements for Toolbar, TreeView, UpDown and DateTimePicker wrappers</li>
-<li>[x] Improved <code>best_match</code> algorithm allows names like <code>ToolbarFile</code>
-</li>
-<li>[x] Clicks can be performed with pressed Ctrl or Shift</li>
-<li>[x] Drag-n-drop and scrolling methods (DragMouse, DragMouseInput, WheelMouseInput)</li>
-<li>[x] Improved menu support: handling OWNERDRAW menu items; access by command_id (like <code>$23453</code>)</li>
-<li>[x] Resolved issues with py2exe and cx_freeze</li>
-<li>[x] <code>RemoteMemoryBlock</code> can now detect memory corruption by checking guard signature</li>
-<li>[x] Upgraded <code>taskbar</code> module for Win7 and Win 8.1; added hidden icons support</li>
-<li>[x] <code>sysinfo</code> module for checking 32-bit or 64-bit OS and Python</li>
-<li>[x] <code>set_foreground</code> flag in <code>TypeKeys</code> method for typing into in-place controls</li>
-<li>[x] Flags <code>create_new_console</code> and <code>wait_for_idle</code> in <code>Application.start_</code> method</li>
-</ul>
 </li>
 </ul>
 
@@ -106,27 +81,12 @@ app.Notepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywin
 </ul>
 
 <h3>
-<a id="dependencies" class="anchor" href="#dependencies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+<a id="swapy" class="anchor" href="#swapy" aria-hidden="true"><span class="octicon octicon-link"></span></a>SWAPY: Simple Windows Automation on Python</h3>
 
-<ul>
-<li>pyWin32 package (<a href="http://sourceforge.net/projects/pywin32/files/pywin32/Build%20219/">build 219</a> is recommended). This is NOT required for ActivePython (except 3.4 64-bit).</li>
-</ul>
+<p class="view">SWAPY is a pywinauto Inspector and Code generator</p>
 
-<h3>
-<a id="testing-status" class="anchor" href="#testing-status" aria-hidden="true"><span class="octicon octicon-link"></span></a>Testing status</h3>
+<p class="view"><img src="https://raw.githubusercontent.com/pywinauto/pywinauto.github.io/master/steps.jpg" alt="SWAPY steps example"/></p>
 
-<ul>
-<li><a href="https://github.com/pywinauto/pywinauto/wiki/Unit-testing-status">Unit tests pass rate for master branch</a></li>
-</ul>
-
-<h4>
-<a id="packages-required-for-running-unit-tests" class="anchor" href="#packages-required-for-running-unit-tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Packages required for running unit tests</h4>
-
-<ul>
-<li>
-<a href="https://pypi.python.org/pypi/Pillow/2.7.0">Pillow</a> or PIL</li>
-<li><a href="https://pypi.python.org/pypi/coverage">coverage</a></li>
-</ul>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/vasily-v-ryabov">vasily-v-ryabov</a></p>
