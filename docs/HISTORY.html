@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Change Log &mdash; pywinauto 0.5.3 documentation</title>
+    <title>Change Log &mdash; pywinauto 0.5.4 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.5.3',
+        VERSION:     '0.5.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pywinauto 0.5.3 documentation" href="contents.html" />
+    <link rel="top" title="pywinauto 0.5.4 documentation" href="contents.html" />
     <link rel="next" title="Main user modules" href="code/code.html" />
     <link rel="prev" title="PYWINAUTO TODO’s" href="TODO.html" /> 
   </head>
@@ -43,7 +43,7 @@
         <li class="right" >
           <a href="TODO.html" title="PYWINAUTO TODO’s"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="contents.html">pywinauto 0.5.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="contents.html">pywinauto 0.5.4 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -54,6 +54,23 @@
             
   <div class="section" id="change-log">
 <h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="bug-fixes-and-partial-mfc-menu-bar-support">
+<h2>0.5.4 Bug fixes and partial MFC Menu Bar support<a class="headerlink" href="#bug-fixes-and-partial-mfc-menu-bar-support" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>30-October-2015</dt>
+<dd><ul class="first last simple">
+<li>Fix bugs and inconsistencies:<ul>
+<li>Add <cite>where=&#8221;check&#8221;</cite> possible value to the ListViewWrapper.Click/ClickInput` methods.</li>
+<li>Add <cite>CheckByClickInput</cite> and <cite>UncheckByClickInput</cite> methods for a plain check box.</li>
+<li>Fix crash while waiting for the window start.</li>
+</ul>
+</li>
+<li>Add partial MFC Menu Bar support. The menu bar can be interpreted as a toolbar. Items are clickable by index through experimental <cite>MenuBarClickInput</cite> method of the <cite>ToolbarWrapper</cite>.</li>
+<li>Python 3.5 is supported.</li>
+</ul>
+</dd>
+</dl>
+</div>
 <div class="section" id="better-unicode-support-for-setedittext-typekeys-and-menu-items">
 <h2>0.5.3 Better Unicode support for SetEditText/TypeKeys and menu items<a class="headerlink" href="#better-unicode-support-for-setedittext-typekeys-and-menu-items" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
@@ -761,6 +778,7 @@ you could use:</p>
   <h3><a href="contents.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">Change Log</a><ul>
+<li><a class="reference internal" href="#bug-fixes-and-partial-mfc-menu-bar-support">0.5.4 Bug fixes and partial MFC Menu Bar support</a></li>
 <li><a class="reference internal" href="#better-unicode-support-for-setedittext-typekeys-and-menu-items">0.5.3 Better Unicode support for SetEditText/TypeKeys and menu items</a></li>
 <li><a class="reference internal" href="#improve-listview-new-methods-for-cpu-usage-dpi-awareness">0.5.2 Improve ListView, new methods for CPU usage, DPI awareness</a></li>
 <li><a class="reference internal" href="#several-fixes-more-tests">0.5.1 Several fixes, more tests</a></li>
@@ -833,7 +851,7 @@ you could use:</p>
         <li class="right" >
           <a href="TODO.html" title="PYWINAUTO TODO’s"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="contents.html">pywinauto 0.5.3 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="contents.html">pywinauto 0.5.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
