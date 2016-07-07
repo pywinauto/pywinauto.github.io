@@ -75,7 +75,7 @@ to be connected to a process. There are two ways of doing this:</p>
 <p><code class="docutils literal"><span class="pre">start()</span></code> is used when the application is not running and you
 need to start it. Use it in the following way:</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s">r&quot;c:\path\to\your\application -a -n -y --arguments&quot;</span><span class="p">)</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application<span class="p">(</span><span class="p">)</span></span></span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s">r&quot;c:\path\to\your\application -a -n -y --arguments&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
@@ -89,13 +89,13 @@ one of the following:</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">process:</th><td class="field-body"><p class="first">the process id of the application, e.g.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">process</span> <span class="o">=</span> <span class="mi">2341</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application<span class="p">(</span><span class="p">)</span></span></span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">process</span> <span class="o">=</span> <span class="mi">2341</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">handle:</th><td class="field-body"><p class="first">The windows handle of a window of the application, e.g.</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle</span> <span class="o">=</span> <span class="mh">0x010f0c</span><span class="p">)</span>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application<span class="p">(</span><span class="p">)</span></span></span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">handle</span> <span class="o">=</span> <span class="mh">0x010f0c</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
@@ -103,7 +103,7 @@ one of the following:</p>
 <tr class="field-odd field"><th class="field-name">path:</th><td class="field-body"><p class="first">The path of the executable of the process (<code class="docutils literal"><span class="pre">GetModuleFileNameEx</span></code>
 is used to find the path of each process and compared against
 the value passed in)  e.g.</p>
-<div class="last highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">r&quot;c:\windows\system32\notepad.exe&quot;</span><span class="p">)</span>
+<div class="last highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application<span class="p">(</span><span class="p">)</span></span></span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">path</span> <span class="o">=</span> <span class="s">r&quot;c:\windows\system32\notepad.exe&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </td>
@@ -113,14 +113,11 @@ the value passed in)  e.g.</p>
 <p>or any combination of the parameters that specify a window, these get
 passed to the <code class="docutils literal"><span class="pre">findwindows.find_windows()</span></code> function.  e.g.</p>
 <blockquote>
-<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">title_re</span> <span class="o">=</span> <span class="s">&quot;.*Notepad&quot;</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="s">&quot;Notepad&quot;</span><span class="p">)</span>
+<div><div class="highlight-python"><div class="highlight"><pre><span class="n">app</span> <span class="o">=</span> <span class="n">Application<span class="p">(</span><span class="p">)</span></span></span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">title_re</span> <span class="o">=</span> <span class="s">&quot;.*Notepad&quot;</span><span class="p">,</span> <span class="n">class_name</span> <span class="o">=</span> <span class="s">&quot;Notepad&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p><strong>Note</strong>: I have since added static methods Application.start() and
-Application.connect() these can be used the same as above - except that
-you no longer need to instantiate an Application object first.</p>
-<p><strong>Note2</strong>: The application has to be ready before you can use connect*().
+<p><strong>Note</strong>: The application has to be ready before you can use connect*().
 There is no timeout or retries like there is when finding the application
 after start*(). So if you start the application outside of pywinauto you
 need to either sleep or program a wait loop to wait until the application

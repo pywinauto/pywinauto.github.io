@@ -25,7 +25,7 @@ need to start it. Use it in the following way:
 
   ::
 
-   app = Application.start(r"c:\path\to\your\application -a -n -y --arguments")
+   app = Application().start(r"c:\path\to\your\application -a -n -y --arguments")
 
 The timeout parameter is optional, it should only be necessary to use
 it if the application takes a long time to start up.
@@ -38,14 +38,14 @@ one of the following:
 
   ::
 
-              app = Application.connect(process = 2341)
+              app = Application().connect(process = 2341)
 
 
 :handle: The windows handle of a window of the application, e.g.
 
   ::
 
-              app = Application.connect(handle = 0x010f0c)
+              app = Application().connect(handle = 0x010f0c)
 
 
 :path: The path of the executable of the process (``GetModuleFileNameEx``
@@ -54,7 +54,7 @@ one of the following:
 
   ::
 
-          app = Application.connect(path = r"c:\windows\system32\notepad.exe")
+          app = Application().connect(path = r"c:\windows\system32\notepad.exe")
 
 
 or any combination of the parameters that specify a window, these get
@@ -62,14 +62,10 @@ passed to the ``findwindows.find_windows()`` function.  e.g.
 
   ::
 
-          app = Application.connect(title_re = ".*Notepad", class_name = "Notepad")
+          app = Application().connect(title_re = ".*Notepad", class_name = "Notepad")
 
 
-**Note**: I have since added static methods Application.start() and
-Application.connect() these can be used the same as above - except that
-you no longer need to instantiate an Application object first.
-
-**Note2**: The application has to be ready before you can use connect*().
+**Note**: The application has to be ready before you can use connect*().
 There is no timeout or retries like there is when finding the application
 after start*(). So if you start the application outside of pywinauto you
 need to either sleep or program a wait loop to wait until the application
