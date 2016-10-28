@@ -8,6 +8,13 @@ SITEURL = ''
 
 PATH = 'content'
 
+# static paths will be copied without parsing their contents
+STATIC_PATHS = [
+    '.gitignore',
+    'LICENSE',
+    '.nojekyll',  # bypass Jekyll (helps for names with underscores)
+]
+
 TIMEZONE = 'Europe/Moscow'
 
 DEFAULT_LANG = 'en'
@@ -25,12 +32,12 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-         ('Documentation', 'https://pywinauto.readthedocs.io/en/latest/'),
-         ('Releases', 'https://github.com/pywinauto/pywinauto/releases/'),
-         ('Pywinauto ZIP File', 'https://github.com/pywinauto/pywinauto/zipball/master/'),
-         ('Pywinauto TAR Ball', 'https://github.com/pywinauto/pywinauto/tarball/master/'),
-         ('Automation blog', 'https://guiautomation.blogspot.com/'),
-         )
+     ('Documentation', 'https://pywinauto.readthedocs.io/en/latest/'),
+     ('Releases', 'https://github.com/pywinauto/pywinauto/releases/'),
+     ('Pywinauto ZIP File', 'https://github.com/pywinauto/pywinauto/zipball/master/'),
+     ('Pywinauto TAR Ball', 'https://github.com/pywinauto/pywinauto/tarball/master/'),
+     ('Automation blog', 'https://guiautomation.blogspot.com/'),
+)
 
 # Social widget
 SOCIAL = ()  # (('You can add links in your config file', '#'),
