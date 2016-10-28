@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Pywinauto - pywinauto</title>
+    <title>Authors - pywinauto</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,15 @@
 
 
 
-<link rel="canonical" href="/">
 
         <meta name="author" content="Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>" />
-        <meta name="description" content="Windows GUI automation with python" />
 
-    <meta property="og:site_name" content="pywinauto" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Pywinauto"/>
-    <meta property="og:url" content="/"/>
-    <meta property="og:description" content="Windows GUI automation with python" />
+    <!-- Open Graph tags -->
+        <meta property="og:site_name" content="pywinauto" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="pywinauto"/>
+        <meta property="og:url" content=""/>
+        <meta property="og:description" content="pywinauto"/>
 
 
     <!-- Bootstrap -->
@@ -64,63 +63,7 @@ pywinauto            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="content" class="body">
-        <h1 class="entry-title">Pywinauto</h1>
-        
-        <div class="entry-content">
-            <p><strong>pywinauto</strong> is a set of python modules to automate the Microsoft Windows GUI. At its simplest it allows you to send mouse and keyboard actions to windows dialogs and controls, but it also supports more complex actions.</p>
-<h4><a href="https://github.com/pywinauto/pywinauto/releases/tag/0.5.4">pywinauto 0.5.4 released</a> (October, 30, 2016)</h4>
-<blockquote>
-<p>Fix bugs and inconsistencies<br />
-Partial MFC Menu Bar support<br />
-Python 3.5 is supported
-<a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip">Download pywinauto-0.5.4.zip</a>  </p>
-</blockquote>
-<p><img alt="logo" src="images/walter_cat.jpg" /> <em>New <a href="https://github.com/pywinauto">team</a> icon</em>. Thanks, <a href="https://www.behance.net/anna9111990"><em>Anna</em></a>, who painted the icon for the team, cat Walter.<br />
-Logo for the pywinauto library <a href="https://github.com/pywinauto/pywinauto/issues/76">is still wanted</a>.</p>
-<h2><a href="#example"></a>Example</h2>
-<p>It is simple and the resulting scripts are very readable. How simple?</p>
-<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywinauto.application</span> <span class="kn">import</span> <span class="n">Application</span>
-<span class="c1"># Run a target application</span>
-<span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">&quot;notepad.exe&quot;</span><span class="p">)</span>
-<span class="c1"># Select a menu item</span>
-<span class="n">app</span><span class="o">.</span><span class="n">UntitledNotepad</span><span class="o">.</span><span class="n">menu_select</span><span class="p">(</span><span class="s2">&quot;Help-&gt;About Notepad&quot;</span><span class="p">)</span>
-<span class="c1"># Click on a button</span>
-<span class="n">app</span><span class="o">.</span><span class="n">AboutNotepad</span><span class="o">.</span><span class="n">OK</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
-<span class="c1"># Type a text string</span>
-<span class="n">app</span><span class="o">.</span><span class="n">UntitledNotepad</span><span class="o">.</span><span class="n">Edit</span><span class="o">.</span><span class="n">type_keys</span><span class="p">(</span><span class="s2">&quot;pywinauto Works!&quot;</span><span class="p">,</span> <span class="n">with_spaces</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<h2><a href="#setup"></a>Setup</h2>
-<ul>
-<li>Just run <code>pip install pywinauto</code> (Py2.7+)</li>
-</ul>
-<p>or</p>
-<ul>
-<li>Install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/">pyWin32 extensions</a> (no need for Active Python except 3.4 64-bit)</li>
-<li>Download <a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip">the latest version</a></li>
-<li>Just unpack and run <code>python setup.py install</code></li>
-</ul>
-<h2><a href="#supported-controls"></a>Supported controls</h2>
-<ul>
-<li>Native Windows controls (full support through Win32 API)</li>
-<li>.NET Windows Forms (partial support through Win32 API, some basic controls only)</li>
-</ul>
-<hr />
-<h2><a href="#demo"></a>Demo</h2>
-<p>Here is a short screencast with Pywinauto in action:</p>
-<p><img alt="Notepad.exe automation example" src="images/notepad-simple2-ir.gif" /></p>
-        </div>
-    </section>
+    <h1>Authors on pywinauto</h1>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
