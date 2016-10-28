@@ -1,5 +1,5 @@
 Title: SWAPY
-Slug: swype-is-a-pywinauto-inspector-and-code-generator
+Slug: swapy-is-a-pywinauto-inspector-and-code-generator
 
 
 ![swapy logo](/images/swapy_dog.png)
@@ -11,7 +11,7 @@ This utility helps to browse through dialogs and controls available to pywinauto
 
 
 #### SWAPY 0.4.8
-The latest version of SWAPY is [0.4.8](https://github.com/pywinauto/SWAPY/releases/tag/0.4.8). It's released on November, 01, 2016.
+The latest version of SWAPY is [0.4.8](https://github.com/pywinauto/SWAPY/releases/tag/0.4.8). It's released on November, 01, 2015.
 It includes the following changes:
 > New Code Generator  
 > Saving code to a file
