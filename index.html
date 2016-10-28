@@ -1,121 +1,221 @@
-<!doctype html>
-<html>
-  <head>
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
+<head>
+    <title>Pywinauto - pywinauto</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>pywinauto - Windows GUI Automation</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>pywinauto</h1>
-        <p>(c) Mark Mc Mahon</p>
-
-        <p class="view"><a href="https://github.com/pywinauto/pywinauto">View the Project on GitHub <small>pywinauto/pywinauto</small></a></p>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-        <ul>
-          <li><a href="https://github.com/pywinauto/pywinauto/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/pywinauto/pywinauto/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/pywinauto/pywinauto">View On <strong>GitHub</strong></a></li>
-        </ul>
 
-        <br/><p class="view"><a href="https://github.com/pywinauto/pywinauto/releases/tag/0.5.4">pywinauto 0.5.4 released</a> (October,30)<br/>
-        <blockquote><p class="view">Fix bugs and inconsistencies<br/>
-        Partial MFC Menu Bar support<br/>
-        Python 3.5 is supported<br/></blockquote>
-        <a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip">Download pywinauto-0.5.4.zip</a><br/></p>
+<link rel="canonical" href="/">
 
-        <br/><p class="view"><a href="https://github.com/pywinauto/pywinauto/releases">All downloads</a></p><br/>
+        <meta name="author" content="Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>" />
+        <meta name="description" content="Windows GUI automation with python" />
 
-        <ul>
-          <li><a href="http://pywinauto.github.io/docs/"><strong>Read the docs (by sphinx)</strong></a></li>
-          <li><a href="https://gist.github.com/vasily-v-ryabov"><strong>View examples</strong></a></li>
-          <li><a href="http://guiautomation.blogspot.com/"><strong>Automation blog</strong></a></li>
-        </ul>
-
-        <br/><br/><p class="view"><a href="https://github.com/pywinauto/SWAPY"><center-left>SWAPY<br/>(Object Inspector and Code Generator)</center-left></a></p>
-
-        <br/><p class="view"><a href="https://github.com/pywinauto/SWAPY/releases/tag/0.4.8">SWAPY 0.4.8 released</a> (November,01)<br/>
-        <blockquote><p class="view">New Code Generator<br/>
-        Saving code to a file</blockquote></p>
+    <meta property="og:site_name" content="pywinauto" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Pywinauto"/>
+    <meta property="og:url" content="/"/>
+    <meta property="og:description" content="Windows GUI automation with python" />
 
 
-      </header>
-      <section>
-        <h1>
-<a id="windows-gui-automation-with-python" class="anchor" href="#windows-gui-automation-with-python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Windows GUI Automation with Python</h1>
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.flatly.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-<p><b>pywinauto</b> is a set of python modules to automate the Microsoft Windows GUI. 
-At it’s simplest it allows you to send mouse and keyboard actions to windows 
-dialogs and controls, but it also supports more complex actions.</p>
-
-<p><table style="width:100%" border="0">
-  <tr>
-    <td colspan="2"><img src="walter_cat.jpg" height="55" width="55"/></td>
-    <td><i>[New <a href="https://github.com/pywinauto">team</a> icon]</i>
-    Thanks, <a href="https://www.behance.net/anna9111990"><u>Anna</u></a>, who painted the icon for the team, cat Walter.<br/>
-    Logo for the pywinauto library <a href="https://github.com/pywinauto/pywinauto/issues/76">is still wanted</a>.</td>
-  </tr>
-</table></p>
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
 
-<h3>
-<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo example</h3>
 
-<p><img src="https://raw.githubusercontent.com/pywinauto/pywinauto.github.io/master/notepad-simple2-ir.gif" alt="Notepad.exe automation example"></p>
 
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+pywinauto            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/swapy-is-a-pywinauto-inspector-and-code-generator.html">
+                             SWAPY
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Pywinauto</h1>
+        
+        <div class="entry-content">
+            <p><strong>pywinauto</strong> is a set of python modules to automate the Microsoft Windows GUI. At its simplest it allows you to send mouse and keyboard actions to windows dialogs and controls, but it also supports more complex actions.</p>
+<h4><a href="https://github.com/pywinauto/pywinauto/releases/tag/0.5.4">pywinauto 0.5.4 released</a> (October, 30, 2015)</h4>
+<blockquote>
+<p>Fix bugs and inconsistencies<br />
+Partial MFC Menu Bar support<br />
+Python 3.5 is supported  </p>
+</blockquote>
+<p><a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip">Download pywinauto-0.5.4.zip</a><br />
+<a href="docs/index.html">Documentation for the release 0.5.4</a></p>
+<p><img alt="logo" src="images/walter_cat.jpg" /> <em>New <a href="https://github.com/pywinauto">team</a> icon</em>. Thanks, <a href="https://www.behance.net/anna9111990"><em>Anna</em></a>, who painted the icon for the team, cat Walter.<br />
+Logo for the pywinauto library <a href="https://github.com/pywinauto/pywinauto/issues/76">is still wanted</a>.</p>
+<h2><a href="#example"></a>Example</h2>
 <p>It is simple and the resulting scripts are very readable. How simple?</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pywinauto.application</span> <span class="kn">import</span> <span class="n">Application</span>
+<span class="c1"># Run a target application</span>
+<span class="n">app</span> <span class="o">=</span> <span class="n">Application</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">(</span><span class="s2">&quot;notepad.exe&quot;</span><span class="p">)</span>
+<span class="c1"># Select a menu item</span>
+<span class="n">app</span><span class="o">.</span><span class="n">UntitledNotepad</span><span class="o">.</span><span class="n">menu_select</span><span class="p">(</span><span class="s2">&quot;Help-&gt;About Notepad&quot;</span><span class="p">)</span>
+<span class="c1"># Click on a button</span>
+<span class="n">app</span><span class="o">.</span><span class="n">AboutNotepad</span><span class="o">.</span><span class="n">OK</span><span class="o">.</span><span class="n">click</span><span class="p">()</span>
+<span class="c1"># Type a text string</span>
+<span class="n">app</span><span class="o">.</span><span class="n">UntitledNotepad</span><span class="o">.</span><span class="n">Edit</span><span class="o">.</span><span class="n">type_keys</span><span class="p">(</span><span class="s2">&quot;pywinauto Works!&quot;</span><span class="p">,</span> <span class="n">with_spaces</span> <span class="o">=</span> <span class="bp">True</span><span class="p">)</span>
+</pre></div>
+</td></tr></table>
 
-<div class="highlight highlight-python"><pre>app.UntitledNotepad.MenuSelect(<span class="pl-s"><span class="pl-pds">"</span>Help-&gt;About Notepad<span class="pl-pds">"</span></span>)
-app.AboutNotepad.OK.Click()
-app.UntitledNotepad.Edit.TypeKeys (<span class="pl-s"><span class="pl-pds">"</span>pywinauto Works!<span class="pl-pds">"</span></span>, <span class="pl-smi">with_spaces</span> <span class="pl-k">=</span> <span class="pl-c1">True</span>)</pre></div>
-
-<h3>
-<a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h3>
-
+<h2><a href="#setup"></a>Setup</h2>
 <ul>
-<li>Just run <code>pip install pywinauto</code> (Py2.7+)
+<li>Just run <code>pip install pywinauto</code> (Py2.7+)</li>
 </ul>
-or
+<p>or</p>
 <ul>
-<li>Install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/" target="_blank">pyWin32 extensions</a> (no need for Active Python except 3.4 64-bit)</li>
-<li>Download <a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip" target="_blank">latest version</a>
-</li>
-<li>Just unpack and run <code>python setup.py install</code>
-</li>
+<li>Install <a href="http://sourceforge.net/projects/pywin32/files/pywin32/">pyWin32 extensions</a> (no need for Active Python except 3.4 64-bit)</li>
+<li>Download <a href="https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip">the latest version</a></li>
+<li>Just unpack and run <code>python setup.py install</code></li>
 </ul>
-
-<h3>
-<a id="supported-controls" class="anchor" href="#supported-controls" aria-hidden="true"><span class="octicon octicon-link"></span></a>Supported controls</h3>
-
+<h2><a href="#supported-controls"></a>Supported controls</h2>
 <ul>
 <li>Native Windows controls (full support through Win32 API)</li>
 <li>.NET Windows Forms (partial support through Win32 API, some basic controls only)</li>
 </ul>
-<br/>
+<hr />
+<h2><a href="#demo"></a>Demo</h2>
+<p>Here is a short screencast with Pywinauto in action:</p>
+<p><img alt="Notepad.exe automation example" src="images/notepad-simple2-ir.gif" /></p>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
 
-<h3>
-<a id="swapy" class="anchor" href="#swapy" aria-hidden="true"><span class="octicon octicon-link"></span></a><img src="https://raw.githubusercontent.com/pywinauto/SWAPY/master/swapy_dog.png" height="40" width="40"/> SWAPY: Simple Windows Automation on Python</h3>
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
 
-<p class="view">SWAPY is a pywinauto Inspector and Code generator</p>
 
-<p class="view"><img src="https://raw.githubusercontent.com/pywinauto/pywinauto.github.io/master/steps.jpg" alt="SWAPY steps example"/></p>
 
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/vasily-v-ryabov">vasily-v-ryabov</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-github fa-lg"></i><span class="icon-label">GitHub Repos</span></h4>
+        <div id="gh_repos">
+            <p class="list-group-item">Status updating...</p>
+        </div>
+            <a href="https://github.com/pywinauto">@pywinauto</a> on GitHub
+    </li>
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="https://pywinauto.readthedocs.io/en/latest/" target="_blank">
+                Documentation
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/pywinauto/pywinauto/releases/" target="_blank">
+                Releases
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/pywinauto/pywinauto/zipball/master/" target="_blank">
+                Pywinauto ZIP File
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://github.com/pywinauto/pywinauto/tarball/master/" target="_blank">
+                Pywinauto TAR Ball
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="https://guiautomation.blogspot.com/" target="_blank">
+                Automation blog
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+            </aside>
+        </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy;  Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+    <!-- GitHub JS -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (!window.jXHR) {
+                var jxhr = document.createElement('script');
+                jxhr.type = 'text/javascript';
+                jxhr.src = '/theme/js/jXHR.js';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(jxhr, s);
+            }
+
+            github.showRepos({
+                user: 'pywinauto',
+                count: 5,
+                skip_forks: true,
+                target: '#gh_repos'
+            });
+        });
+    </script>
+    <script src="/theme/js/github.js" type="text/javascript"></script>
+    <!-- End GitHub JS Code -->
+
+</body>
 </html>
