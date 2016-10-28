@@ -6,13 +6,14 @@ Save_as: index.html
 
 **pywinauto** is a set of python modules to automate the Microsoft Windows GUI. At its simplest it allows you to send mouse and keyboard actions to windows dialogs and controls, but it also supports more complex actions.
 
-#### [pywinauto 0.5.4 released](https://github.com/pywinauto/pywinauto/releases/tag/0.5.4) (October, 30, 2016)  
+#### [pywinauto 0.5.4 released](https://github.com/pywinauto/pywinauto/releases/tag/0.5.4) (October, 30, 2015)  
 
 > Fix bugs and inconsistencies  
 > Partial MFC Menu Bar support  
-> Python 3.5 is supported
-[Download pywinauto-0.5.4.zip](https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip)  
+> Python 3.5 is supported  
 
+[Download pywinauto-0.5.4.zip](https://github.com/pywinauto/pywinauto/releases/download/0.5.4/pywinauto-0.5.4.zip)  
+[Documentation for the release 0.5.4](docs/index.html)
 
 
 ![logo](images/walter_cat.jpg) _New [team](https://github.com/pywinauto) icon_. Thanks, [_Anna_](https://www.behance.net/anna9111990), who painted the icon for the team, cat Walter.  

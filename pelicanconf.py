@@ -10,10 +10,15 @@ PATH = 'content'
 
 # static paths will be copied without parsing their contents
 STATIC_PATHS = [
+    'images',
     '.gitignore',
     'LICENSE',
     '.nojekyll',  # bypass Jekyll (helps for names with underscores)
+    'docs',  # documentation for pywinauto 0.5.4
 ]
+
+# Avoid processing .html (copy old html files from docs folder as is)
+READERS = {'html': None}
 
 TIMEZONE = 'Europe/Moscow'
 
