@@ -105,6 +105,7 @@ pywinauto            </a>
 <em>Menu</em>, <em>Button</em>/<em>CheckBox</em>/<em>RadioButton</em>, <em>ComboBox</em>, <em>Edit</em>, <em>Tab control</em>, <em>List</em> (<em>ListView</em>), <em>DataGrid</em>, <em>Tree</em>, <em>Toolbar</em>, <em>Tooltip</em>, <em>Slider</em>.</p>
 <p>Documentation is built continuously now on <a href="https://pywinauto.readthedocs.io/en/latest/">ReadTheDocs</a>.
   See also our improved <a href="https://pywinauto.readthedocs.io/en/latest/getting_started.html">Getting Started Guide</a></p>
+<p>Modules <code>keyboard</code> and <code>mouse</code> can be used out of any window context now. And they work on Linux as well!</p>
 <p>New multi-backend architecture makes implementation of new platforms support
   easier in the future. The minimal set for new backend includes its name and
   two classes inherited from
@@ -114,7 +115,8 @@ pywinauto            </a>
   New backend must be registered by a call to
   <a href="http://pywinauto.readthedocs.io/en/latest/code/pywinauto.backend.html?highlight=backend.register#pywinauto.backend.register">backend.register()</a>.</p>
 <p>Code style is much closer to PEP8: i.e. <code>click_input</code> should be used
-  instead of <code>ClickInput</code>.</p>
+  instead of <code>ClickInput</code>. Though <code>backend='win32'</code> is
+  ~80% backward compatible with pywinauto 0.5.4.</p>
 <p>Initial implementation of the <em>hooks</em> module. Keyboard and mouse event
   handlers can be registered in the system. It was inspired by <em>pyHook</em>, <em>pyhk</em>,
   <em>pyhooked</em> and similar modules, but re-written from scratch. Thanks for
