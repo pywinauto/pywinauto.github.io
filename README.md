@@ -4,6 +4,9 @@ To install "pelican":
 `pip install pelican`  
 `pip install Markdown`  
 
+# Site preview
+`cd output`
+Python2.7: `python -m SimpleHTTPServer`
 
 # Site generation
 
