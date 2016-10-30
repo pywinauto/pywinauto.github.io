@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>SWAPY - pywinauto</title>
+    <title>Pywinauto 0.6.0 - pywinauto</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -9,16 +9,19 @@
 
 
 
-<link rel="canonical" href="/pages/swapy-is-a-pywinauto-inspector-and-code-generator.html">
+<link rel="canonical" href="/pywinauto_0_6_is_released.html">
 
         <meta name="author" content="Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>" />
-        <meta name="description" content="SWAPY states for Simple Windows Automation on Python. It is a Pywinauto object inspector and a code generator. This utility helps to browse through dialogs and controls available to pywinauto and generate code for automation the application. SWAPY 0.4.8 The latest version of SWAPY is 0.4.8. It&#39;s released on November, 01, 2015. It includes the following changes: New Code Generator Saving code to a file" />
+        <meta name="description" content="pywinauto 0.6.0 is in the master branch (October, 30, 2016). We are on the stabilization path now. This big release introduces MS UI Automation (UIA) support, just start from app = Application(backend=&#39;uia&#39;).start(&#39;your_app.exe&#39;)" />
 
-    <meta property="og:site_name" content="pywinauto" />
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="SWAPY"/>
-    <meta property="og:url" content="/pages/swapy-is-a-pywinauto-inspector-and-code-generator.html"/>
-    <meta property="og:description" content="SWAPY states for Simple Windows Automation on Python. It is a Pywinauto object inspector and a code generator. This utility helps to browse through dialogs and controls available to pywinauto and generate code for automation the application. SWAPY 0.4.8 The latest version of SWAPY is 0.4.8. It&#39;s released on November, 01, 2015. It includes the following changes: New Code Generator Saving code to a file" />
+        <meta property="og:site_name" content="pywinauto" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="Pywinauto 0.6.0"/>
+        <meta property="og:url" content="/pywinauto_0_6_is_released.html"/>
+        <meta property="og:description" content="pywinauto 0.6.0 is in the master branch (October, 30, 2016). We are on the stabilization path now. This big release introduces MS UI Automation (UIA) support, just start from app = Application(backend=&#39;uia&#39;).start(&#39;your_app.exe&#39;)"/>
+        <meta property="article:published_time" content="2016-10-30" />
+            <meta property="article:section" content="News" />
+            <meta property="article:author" content="Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>" />
 
 
     <!-- Bootstrap -->
@@ -49,10 +52,10 @@ pywinauto            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
-                         <li class="active"><a href="/pages/swapy-is-a-pywinauto-inspector-and-code-generator.html">
+                         <li><a href="/pages/swapy-is-a-pywinauto-inspector-and-code-generator.html">
                              SWAPY
                           </a></li>
-                        <li >
+                        <li class="active">
                             <a href="/category/news.html">News</a>
                         </li>
             </ul>
@@ -67,23 +70,63 @@ pywinauto            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="content" class="body">
-        <h1 class="entry-title">SWAPY</h1>
-        
-        <div class="entry-content">
-            <p><img alt="swapy logo" src="/images/swapy_dog.png" /></p>
-<p>SWAPY states for Simple Windows Automation on Python. It is a Pywinauto object inspector and a code generator.
-This utility helps to browse through dialogs and controls available to pywinauto and generate code for automation the application.</p>
-<p><img alt="SWAPY steps example" src="/images/steps.jpg" />  </p>
-<h4>SWAPY 0.4.8</h4>
-<p>The latest version of SWAPY is <a href="https://github.com/pywinauto/SWAPY/releases/tag/0.4.8">0.4.8</a>. It's released on November, 01, 2015.
-It includes the following changes:</p>
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="/pywinauto_0_6_is_released.html"
+                       rel="bookmark"
+                       title="Permalink to Pywinauto 0.6.0">
+                        Pywinauto 0.6.0
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-10-30T10:20:00+03:00"> Sun 30 October 2016</time>
+    </span>
+
+
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h4><a href="https://github.com/pywinauto/pywinauto/zipball/master/">pywinauto 0.6.0 is in the master branch</a> (October, 30, 2016)</h4>
 <blockquote>
-<p>New Code Generator<br />
-Saving code to a file</p>
+<p>This big release introduces MS UI Automation (UIA) support. Just start from:<br />
+<code>app = Application(backend='uia').start('your_app.exe')</code>.<br />
+    Supported controls:<br />
+<em>Menu</em>, <em>Button</em>/<em>CheckBox</em>/<em>RadioButton</em>, <em>ComboBox</em>, <em>Edit</em>, <em>Tab control</em>, <em>List</em> (<em>ListView</em>), <em>DataGrid</em>, <em>Tree</em>, <em>Toolbar</em>, <em>Tooltip</em>, <em>Slider</em>.</p>
+<p>Documentation is built continuously now on <a href="https://pywinauto.readthedocs.io/en/latest/">ReadTheDocs</a>.
+  See also our improved <a href="https://pywinauto.readthedocs.io/en/latest/getting_started.html">Getting Started Guide</a></p>
+<p>New multi-backend architecture makes implementation of new platforms support
+  easier in the future. The minimal set for new backend includes its name and
+  two classes inherited from
+  <a href="http://pywinauto.readthedocs.io/en/latest/code/pywinauto.element_info.html?highlight=ElementInfo#pywinauto.element_info.ElementInfo">ElementInfo</a>
+  and from
+  <a href="http://pywinauto.readthedocs.io/en/latest/code/pywinauto.base_wrapper.html#pywinauto.base_wrapper.BaseWrapper">BaseWrapper</a> classes.
+  New backend must be registered by a call to
+  <a href="http://pywinauto.readthedocs.io/en/latest/code/pywinauto.backend.html?highlight=backend.register#pywinauto.backend.register">backend.register()</a>.</p>
+<p>Code style is much closer to PEP8: i.e. <code>click_input</code> should be used
+  instead of <code>ClickInput</code>.</p>
+<p>Initial implementation of the <em>hooks</em> module. Keyboard and mouse event
+  handlers can be registered in the system. It was inspired by <em>pyHook</em>, <em>pyhk</em>,
+  <em>pyhooked</em> and similar modules, but re-written from scratch. Thanks for
+  Max Samokhvalov! The fork of the <em>hooks</em> module is used in <em>pyhooked 0.8</em>
+  by Ethan Smith.</p>
+<p>A lot of small improvements are not counted here.</p>
 </blockquote>
-        </div>
+            </div>
+            <!-- /.entry-content -->
+        </article>
     </section>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
