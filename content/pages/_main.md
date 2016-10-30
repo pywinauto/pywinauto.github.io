@@ -7,33 +7,20 @@ Save_as: index.html
 **pywinauto** is a set of python modules to automate the Microsoft Windows GUI. At its simplest it allows you to send mouse and keyboard actions to windows dialogs and controls, but it also supports more complex actions.
 
 #### [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/zipball/master/) (October, 30, 2016)  
-> This big release introduces MS UI Automation (UIA) support. Just start from:  
-    `app = Application(backend='uia').start('your_app.exe')`.  
-    Supported controls:  
-    *Menu*, *Button*/*CheckBox*/*RadioButton*, *ComboBox*, *Edit*, *Tab control*, *List* (*ListView*), *DataGrid*, *Tree*, *Toolbar*, *Tooltip*, *Slider*.
+> This big release introduces MS UI Automation (UIA) support.
 
 > Documentation is built continuously now on [ReadTheDocs](https://pywinauto.readthedocs.io/en/latest/).
   See also our improved [Getting Started Guide](https://pywinauto.readthedocs.io/en/latest/getting_started.html)
 
-> New multi-backend architecture makes implementation of new platforms support
-  easier in the future. The minimal set for new backend includes its name and
-  two classes inherited from
-  [ElementInfo](http://pywinauto.readthedocs.io/en/latest/code/pywinauto.element_info.html?highlight=ElementInfo#pywinauto.element_info.ElementInfo)
-  and from
-  [BaseWrapper](http://pywinauto.readthedocs.io/en/latest/code/pywinauto.base_wrapper.html#pywinauto.base_wrapper.BaseWrapper) classes.
-  New backend must be registered by a call to
-  [backend.register()](http://pywinauto.readthedocs.io/en/latest/code/pywinauto.backend.html?highlight=backend.register#pywinauto.backend.register).
+> Modules `keyboard` and `mouse` can be used out of any window context now. And they work on Linux as well!
 
-> Code style is much closer to PEP8: i.e. `click_input` should be used
-  instead of `ClickInput`.
+> Multi-backend architecture allows to add new platforms support. Just implement two classes and register your backend!
 
-> Initial implementation of the *hooks* module. Keyboard and mouse event
-  handlers can be registered in the system. It was inspired by *pyHook*, *pyhk*,
-  *pyhooked* and similar modules, but re-written from scratch. Thanks for
-  Max Samokhvalov! The fork of the *hooks* module is used in *pyhooked 0.8*
-  by Ethan Smith.
+> Code style is much closer to PEP8: `ClickInput` -> `click_input`. Though `backend='win32'` is
+  ~80% backward compatible with pywinauto 0.5.4.
 
-> A lot of small improvements are not counted here.
+> Initial implementation of the *win32_hooks* module. Keyboard and mouse event
+  handlers can be registered in the system.
 
 ![logo](images/walter_cat.jpg) _New [team](https://github.com/pywinauto) icon_. Thanks, [_Anna_](https://www.behance.net/anna9111990), who painted the icon for the team, cat Walter.  
 Logo for the pywinauto library [is still wanted](https://github.com/pywinauto/pywinauto/issues/76).
@@ -57,7 +44,7 @@ It is simple and the resulting scripts are very readable. How simple?
 
 ## [](#setup)Setup
 
-*   Just run `pip install pywinauto` (Py2.7+)
+*   Just run `pip install pywinauto` (Py2.7+, Py3.3+)
 
 or
 

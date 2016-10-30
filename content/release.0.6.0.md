@@ -13,6 +13,8 @@ Summary: [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/
 > Documentation is built continuously now on [ReadTheDocs](https://pywinauto.readthedocs.io/en/latest/).
   See also our improved [Getting Started Guide](https://pywinauto.readthedocs.io/en/latest/getting_started.html)
 
+> Modules `keyboard` and `mouse` can be used out of any window context now. And they work on Linux as well!
+
 > New multi-backend architecture makes implementation of new platforms support
   easier in the future. The minimal set for new backend includes its name and
   two classes inherited from
@@ -23,7 +25,8 @@ Summary: [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/
   [backend.register()](http://pywinauto.readthedocs.io/en/latest/code/pywinauto.backend.html?highlight=backend.register#pywinauto.backend.register).
 
 > Code style is much closer to PEP8: i.e. `click_input` should be used
-  instead of `ClickInput`.
+  instead of `ClickInput`. Though `backend='win32'` is
+  ~80% backward compatible with pywinauto 0.5.4.
 
 > Initial implementation of the *hooks* module. Keyboard and mouse event
   handlers can be registered in the system. It was inspired by *pyHook*, *pyhk*,
