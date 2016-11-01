@@ -6,7 +6,7 @@ Save_as: index.html
 
 **pywinauto** is a set of python modules to automate the Microsoft Windows GUI. At its simplest it allows you to send mouse and keyboard actions to windows dialogs and controls, but it also supports more complex actions.
 
-### [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/zipball/master/) (October, 30, 2016)  
+### [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (October, 30, 2016)  
 - This big release introduces MS UI Automation (UIA) support.
 - Documentation is built continuously now on [ReadTheDocs](https://pywinauto.readthedocs.io/en/latest/).
   See also our improved [Getting Started Guide](https://pywinauto.readthedocs.io/en/latest/getting_started.html)

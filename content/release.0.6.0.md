@@ -3,9 +3,9 @@ Date: 30/10/2016 10:20
 Modified: 31/10/2016 09:00
 Slug: pywinauto_0_6_is_released
 Category: News
-Summary: [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/zipball/master/) (October, 30, 2016).  We are on the stabilization path now. This big release introduces MS UI Automation (UIA) support, just start from ``app = Application(backend='uia').start('your_app.exe')``
+Summary: [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (October, 30, 2016).  We are on the stabilization path now. This big release introduces MS UI Automation (UIA) support, just start from ``app = Application(backend='uia').start('your_app.exe')``
 
-#### [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/zipball/master/) (October, 30, 2016)  
+#### [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (October, 30, 2016)  
 - This big release introduces MS UI Automation (UIA) support. Just start from:  
     `app = Application(backend='uia').start('your_app.exe')`.  
     Supported controls:  
@@ -36,3 +36,5 @@ Summary: [pywinauto 0.6.0 is in the master branch](https://github.com/pywinauto/
   by Ethan Smith.
 
 - A lot of small improvements are not counted here.
+
+[Download pywinauto-0.6.0.zip](https://github.com/pywinauto/pywinauto/releases/download/0.6.0/pywinauto-0.6.0.zip)  
