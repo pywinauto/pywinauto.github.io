@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = """Mark Mc Mahon. This project is maintained by <a href=https://github.com/vasily-v-ryabov>vasily-v-ryabov</a>"""
+AUTHOR = """Mark Mc Mahon and contributors. This project is maintained by <a href=https://github.com/vasily-v-ryabov>Vasily Ryabov</a>"""
 SITENAME = 'pywinauto'
 SITEURL = ''
 
@@ -38,6 +38,7 @@ AUTHOR_FEED_RSS = None
 # Blogroll
 LINKS = (
      ('Documentation', 'https://pywinauto.readthedocs.io/en/latest/'),
+     ('Getting Started Guide', 'https://pywinauto.readthedocs.io/en/latest/getting_started.html'),
      ('Releases', 'https://github.com/pywinauto/pywinauto/releases/'),
      ('Pywinauto ZIP File', 'https://github.com/pywinauto/pywinauto/zipball/master/'),
      ('Pywinauto TAR Ball', 'https://github.com/pywinauto/pywinauto/tarball/master/'),
