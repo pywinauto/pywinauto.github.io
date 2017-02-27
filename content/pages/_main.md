@@ -8,7 +8,7 @@ Save_as: index.html
 At its simplest it allows you to send mouse and keyboard actions to dialogs and controls on both Windows and Linux,
 while more complex text-based actions are supported on Windows only so far (Linux AT-SPI support is under development).
 
-### The latest major release is [0.6.0](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (Oct, 31), updated to [0.6.1](https://github.com/pywinauto/pywinauto/releases/tag/0.6.1) (Feb, 08)
+### [Pywinauto 0.6.0](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (Oct, 31) and [0.6.1](https://github.com/pywinauto/pywinauto/releases/tag/0.6.1) (Feb, 08)
 - This big release introduces MS UI Automation (UIA) support (WinForms, WPF, Qt, browsers, Store apps and more).
 - Documentation is built continuously now on [ReadTheDocs](https://pywinauto.readthedocs.io/en/latest/).
   See also our improved [Getting Started Guide](https://pywinauto.readthedocs.io/en/latest/getting_started.html)
