@@ -1,6 +1,6 @@
 Title: Pywinauto
 Slug: pywinauto-GUI-automation-tool
-Summary: Windows GUI automation with python
+Summary: Windows GUI Automation with Python
 URL:
 Save_as: index.html
 
@@ -8,17 +8,12 @@ Save_as: index.html
 At its simplest it allows you to send mouse and keyboard actions to dialogs and controls on both Windows and Linux,
 while more complex text-based actions are supported on Windows only so far (Linux AT-SPI support is under development).
 
-### [Pywinauto 0.6.0](https://github.com/pywinauto/pywinauto/releases/tag/0.6.0) (Oct, 31) and [0.6.1](https://github.com/pywinauto/pywinauto/releases/tag/0.6.1) (Feb, 08)
-- This big release introduces MS UI Automation (UIA) support (WinForms, WPF, Qt, browsers, Store apps and more).
-- Documentation is built continuously now on [ReadTheDocs](https://pywinauto.readthedocs.io/en/latest/).
-  See also our improved [Getting Started Guide](https://pywinauto.readthedocs.io/en/latest/getting_started.html)
-- Modules [keyboard](https://pywinauto.readthedocs.io/en/latest/code/pywinauto.keyboard.html) and [mouse](https://pywinauto.readthedocs.io/en/latest/code/pywinauto.mouse.html) can be used out of any window context now. And they work on Linux as well!
-- Multi-backend architecture allows to add new platforms support. Just implement two classes and register your backend!
-- Code style is much closer to PEP8: `ClickInput` -> `click_input`. Though `backend='win32'` is
-  ~80% backward compatible with pywinauto 0.5.4.
-- Initial implementation of the *win32_hooks* module. Keyboard events (a.k.a hotkeys) and mouse actions
-  handlers can be registered in the system. Example: [hook_and_listen.py](https://github.com/pywinauto/pywinauto/blob/master/examples/hook_and_listen.py).
-
+## [](#advantages)Advantages
+* Text based GUI automation is the most reliable/portable way being resistant to changes in UI layout, screen resolution, theme, fonts etc.
+* Flexible timings are automatically on (see [Waiting for Long Operations](https://pywinauto.readthedocs.io/en/latest/wait_long_operations.html) for more details).
+* Multiple backends architecture.
+* MS UI Automation API support is native (using COM library) and free from .NET layer bugs.
+* Tend to be cross-platform in the mid-term. Linux support is coming at the H2 of 2018, macOS is currently targeted to 2019-2020.
 
 ## [](#example)Example
 It is simple and the resulting scripts are very readable. How simple?
@@ -57,6 +52,7 @@ or install on Linux:
 
 * Standard Win32 controls (through Win32 API): MFC, WTL, VB6 and some other legacy apps, partial support for WinForms
 * All standard widgets under MS UI Automation: WinForms, WPF, Qt, all browsers, explorer.exe and more (pywinauto 0.6.0+)
+* Chrome browser (all OSes) should enable accessibility on the web pages by running `chrome --force-renderer-accessibility`.
 
 
 ---  
